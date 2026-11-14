@@ -1,0 +1,16 @@
+मोबाइल से APK बनाने का तरीका (GitHub Actions)
+
+जरूरी: इस तरीके में मोबाइल के Chrome ब्राउज़र और GitHub अकाउंट की जरूरत है। APK क्लाउड में बनेगी; मोबाइल में Android Studio की जरूरत नहीं है।
+
+1) https://github.com पर अकाउंट बनाएं/Sign in करें।
+2) + बटन > New repository चुनें। नाम रखें: matdata-prabandhan-2026 और Public चुनें (या Private; Actions चालू रखें), फिर Create repository करें।
+3) इस ZIP को मोबाइल में Extract करें। अंदर का MatdataAndroid फोल्डर खोलें।
+4) GitHub repository में Add file > Upload files चुनें। MatdataAndroid फोल्डर के अंदर की सभी फाइलें और .github सहित अपलोड करें। ध्यान दें: .github छिपा हो तो फाइल मैनेजर में Show hidden files चालू करें।
+5) Commit changes दबाएं।
+6) Repository के Actions टैब में जाएं। Build Matdata APK workflow चलना चाहिए। अगर न चले तो Actions > Build Matdata APK > Run workflow दबाएं।
+7) Build सफल होने पर उसी workflow run को खोलें। नीचे Artifacts में Matdata-Prabandhan-2026-APK.zip मिलेगा। डाउनलोड करके Extract करें।
+8) app-debug.apk पर टैप करके इंस्टॉल करें। Android पूछे तो Chrome/Files को Install unknown apps की अनुमति दें। केवल अपनी बनाई APK इंस्टॉल करें।
+
+समस्या आए तो Actions में लाल X वाले run को खोलकर error का screenshot भेजें।
+
+नोट: यह debug APK है, Play Store release-signed APK नहीं। वास्तविक थर्मल प्रिंटर पर Bluetooth pairing और हिंदी प्रिंटिंग का परीक्षण जरूरी है।
